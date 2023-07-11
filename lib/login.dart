@@ -23,7 +23,8 @@ class _LoginState extends State<Login> {
               padding: EdgeInsets.fromLTRB(0, 0, 0, 70),
               child: Text(
                 'ZENENIC',
-                style: TextStyle(color: Colors.white, fontSize: 50, fontFamily: 'fontMain'),
+                style: TextStyle(
+                    color: Colors.white, fontSize: 50, fontFamily: 'fontMain'),
               ),
             ),
             const SizedBox(
@@ -33,10 +34,10 @@ class _LoginState extends State<Login> {
                 style: TextStyle(color: Colors.white),
                 decoration: InputDecoration(
                   border: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white)
-                  ),
+                      borderSide: BorderSide(color: Colors.white)),
                   hintText: 'Email Address',
-                  hintStyle:TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
+                  hintStyle:
+                      TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
                   prefixIcon: Icon(
                     Icons.email,
                     color: Colors.white,
@@ -83,54 +84,62 @@ class _LoginState extends State<Login> {
                 ),
               ),
             ),
-            const Text('Forgot Password?', style: TextStyle(color: Colors.white),),
-            const Padding(
-              padding: EdgeInsets.fromLTRB(0, 90, 0, 0),
+            const Text(
+              'Forgot Password?',
+              style: TextStyle(color: Colors.white),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0, 90, 0, 0),
               child: SizedBox(
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SizedBox(
                       child: Row(
                         children: [
-                          Icon(
-                            Icons.facebook,
-                            color: Colors.white,
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: SizedBox(
+                                child: OutlinedButton.icon(
+                              onPressed: () => {},
+                              style: OutlinedButton.styleFrom(
+                                side: const BorderSide(color: Colors.white),
+                              ),
+                              icon: const Icon(
+                                // <-- Icon
+                                Icons.facebook,
+                                color: Colors.white,
+                                size: 24.0,
+                              ),
+                              label: const Text(
+                                'FACEBOOK',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            )),
                           ),
                           Padding(
-                            padding: EdgeInsets.fromLTRB(9, 0, 0, 0),
-                            child: Text(
-                              'FACEBOOK',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ),
+                            padding: const EdgeInsets.all(8.0),
+                            child: SizedBox(
+                                child: OutlinedButton.icon(
+                              onPressed: () => {},
+                              style: OutlinedButton.styleFrom(
+                                side: const BorderSide(color: Colors.white),
+                              ),
+                              icon: const Icon(
+                                // <-- Icon
+                                Icons.facebook,
+                                color: Colors.white,
+                                size: 24.0,
+                              ),
+                              label: const Text(
+                                'TWITTER',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            )),
+                          )
                         ],
                       ),
                     ),
-                    SizedBox(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Icon(
-                            Icons.facebook_rounded,
-                            color: Colors.white,
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(9, 0, 0, 0),
-                            child: Text(
-                              'TWITTER',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ),
-                        ],
-                      ),
-                    )
                   ],
                 ),
               ),
